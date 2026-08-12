@@ -1,0 +1,234 @@
+# 🌍 WTO Trade Intelligence Assistant
+
+An AI-powered Retrieval-Augmented Generation (RAG) application that enables users to ask natural language questions about WTO accession, trade policy, membership, dispute settlement, and WTO agreements.
+
+The application combines:
+
+- WTO Knowledge Base
+- ChromaDB Vector Database
+- Sentence Transformers Embeddings
+- Google Gemini LLM
+- Streamlit Frontend
+
+---
+
+## 🚀 Features
+
+### Semantic Search
+Uses vector embeddings to retrieve relevant WTO documents based on meaning rather than keyword matching.
+
+### Retrieval-Augmented Generation (RAG)
+Retrieves WTO content from ChromaDB and provides contextual responses using Gemini.
+
+### Source Attribution
+Displays source URLs used to generate responses.
+
+### WTO Knowledge Coverage
+
+Supports questions related to:
+
+- WTO Accession
+- WTO Membership
+- Trade for Peace Initiative
+- WTO Agreements
+- Trade Policy
+- Dispute Settlement
+- Technical Assistance
+- Capacity Building
+- WTO Commitments
+- Working Party Reports
+
+---
+
+## 🏗 Architecture
+
+User Question
+↓
+Sentence Transformer
+(all-MiniLM-L6-v2)
+↓
+ChromaDB Vector Search
+↓
+Top Relevant WTO Chunks
+↓
+Gemini LLM
+↓
+Generated Answer + Sources
+
+---
+
+## 🛠 Technology Stack
+
+| Component | Technology |
+|------------|------------|
+| Frontend | Streamlit |
+| LLM | Google Gemini |
+| Embeddings | Sentence Transformers |
+| Vector Database | ChromaDB |
+| Language | Python |
+| Knowledge Source | WTO Website |
+
+---
+
+## 📂 Project Structure
+
+wto-rag-assistant/
+
+├── app.py
+
+├── scrape_wto.py
+
+├── chunk_documents.py
+
+├── create_embeddings.py
+
+├── test_gemini.py
+
+├── debug_search.py
+
+├── chroma_db/
+
+├── scraped_data/
+
+├── .env
+
+├── requirements.txt
+
+└── README.md
+
+---
+
+## ⚙️ Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/yourusername/wto-rag-assistant.git
+
+cd wto-rag-assistant
+```
+
+### Create Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+Mac/Linux:
+
+```bash
+source venv/bin/activate
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file:
+
+```env
+GOOGLE_API_KEY=your_api_key_here
+```
+
+---
+
+## ▶️ Run Application
+
+```bash
+streamlit run app.py
+```
+
+Application will open at:
+
+```text
+http://localhost:8501
+```
+
+---
+
+## Example Questions
+
+### WTO Accession
+
+```text
+What is WTO accession?
+```
+
+### Trade for Peace
+
+```text
+What is Trade for Peace?
+```
+
+### Membership
+
+```text
+How does a country become a WTO member?
+```
+
+### Dispute Settlement
+
+```text
+Explain WTO dispute settlement process.
+```
+
+---
+
+## Sample Workflow
+
+1. User enters question
+2. Query embedding generated
+3. ChromaDB retrieves top WTO documents
+4. Context sent to Gemini
+5. Gemini generates answer
+6. Sources displayed
+
+---
+
+## Future Enhancements
+
+- Chat History
+- Multi-turn Conversations
+- Feedback System
+- Citation Highlighting
+- WTO PDF Processing
+- Multilingual Support
+- Hybrid Search (Keyword + Semantic)
+- User Authentication
+
+---
+
+## Business Value
+
+This solution reduces manual document searching and enables:
+
+- Trade Analysts
+- Researchers
+- Students
+- Policymakers
+- Business Analysts
+
+to access WTO information quickly and efficiently.
+
+---
+
+## Author
+
+Chinmayee Surwade
+
+Business Analyst | Data Analyst | AI Enthusiast
+Phone:+91 9363099166
+Email:chinmayee.surwade@gmail.com
+LinkedIn:www.linkedin.com/in/chinmayeesurwade
