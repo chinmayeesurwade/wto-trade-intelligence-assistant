@@ -1,0 +1,14 @@
+streamlit
+chromadb
+sentence-transformers
+google-genai
+python-dotenv
+torch
+transformers
+huggingface-hub
+numpy
+pandas
+requests
+beautifulsoup4
+lxml
+tqdm
