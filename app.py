@@ -63,10 +63,16 @@ embedding_model = load_embedding_model()
 # CHROMADB
 # ============================================================
 
-client_db = chromadb.PersistentClient(
-    path="./chroma_db"
+import os
+
+DB_PATH = os.path.join(
+    os.path.dirname(__file__),
+    "chroma_db"
 )
 
+client_db = chromadb.PersistentClient(
+    path=DB_PATH
+)
 collection = client_db.get_collection(
     name="wto_knowledge_base"
 )

@@ -1,11 +1,10 @@
 import chromadb
 
-client = chromadb.PersistentClient(
-    path="./chroma_db"
-)
+client = chromadb.PersistentClient(path="./chroma_db")
 
-collection = client.get_collection(
-    name="wto_knowledge_base"
-)
+collections = client.list_collections()
 
-print("Total documents:", collection.count())
+print("\nCollections found:\n")
+
+for c in collections:
+    print(c.name)
